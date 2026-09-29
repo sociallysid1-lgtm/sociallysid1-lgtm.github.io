@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Siddiqah Auckbarallee — Marketing Portfolio</title>
+  <meta name="description" content="Integrated campaigns, content, brand storytelling and digital experiences by Siddiqah Auckbarallee.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23151110'/%3E%3Ctext x='9' y='43' font-family='Arial' font-size='30' font-weight='700' fill='%23f4efe9'%3ESA%3C/text%3E%3Ccircle cx='51' cy='16' r='5' fill='%23b22b22'/%3E%3C/svg%3E">
+  <style>
+    :root {
+      --ink:#151110;
+      --paper:#f4efe9;
+      --white:#fffdf9;
+      --red:#a72319;
+      --wine:#581f25;
+      --gold:#caa76c;
+      --sage:#788267;
+      --line:rgba(21,17,16,.18);
+      --muted:#6f6661;
+      --serif: Georgia, 'Times New Roman', serif;
+      --sans: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;background:var(--paper)}
+    body{margin:0;color:var(--ink);background:var(--paper);font-family:var(--sans);font-size:16px;line-height:1.55;overflow-x:hidden}
+    button,a{font:inherit}
+    a{color:inherit}
+    img{display:block;max-width:100%}
+    .progress{position:fixed;inset:0 auto auto 0;height:3px;width:0;background:var(--red);z-index:100}
+    .shell{width:min(1380px,calc(100% - 48px));margin:auto}
+    .nav{height:82px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);position:relative;z-index:20}
+    .brand{display:flex;align-items:center;gap:12px;text-decoration:none;font-weight:800;letter-spacing:-.03em}
+    .brand-mark{width:39px;height:39px;border-radius:50%;background:var(--ink);color:var(--paper);display:grid;place-items:center;font-size:13px;letter-spacing:.02em}
+    .brand i{width:8px;height:8px;background:var(--red);border-radius:50%;display:block}
+    .nav-links{display:flex;align-items:center;gap:28px}
+    .nav-links a{text-decoration:none;font-size:14px;font-weight:650}
+    .nav-links a:hover{text-decoration:underline;text-underline-offset:5px}
+    .nav-cta{border:1px solid var(--ink);border-radius:100px;padding:10px 17px}
+    .hero{min-height:calc(100svh - 82px);display:grid;grid-template-columns:minmax(0,1.35fr) minmax(300px,.65fr);align-items:center;gap:6vw;padding:54px 0 70px;position:relative}
+    .eyebrow{display:flex;align-items:center;gap:10px;text-transform:uppercase;font-size:12px;letter-spacing:.14em;font-weight:750;margin:0 0 22px}
+    .eyebrow::before{content:'';width:32px;height:2px;background:var(--red)}
+    h1{font-family:var(--serif);font-size:clamp(64px,9.8vw,150px);line-height:.83;letter-spacing:-.07em;font-weight:400;margin:0;max-width:1050px}
+    h1 span{display:block;font-family:var(--sans);font-weight:850;font-size:.36em;line-height:1.12;letter-spacing:-.055em;margin-top:24px}
+    .hero-copy{font-size:clamp(17px,1.45vw,21px);max-width:650px;margin:32px 0;color:#3f3936}
+    .actions{display:flex;flex-wrap:wrap;gap:12px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;border:1px solid var(--ink);padding:11px 19px;border-radius:100px;text-decoration:none;font-weight:750;transition:.2s ease;background:transparent;cursor:pointer}
+    .btn.primary{background:var(--ink);color:var(--paper)}
+    .btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(21,17,16,.12)}
+    .hero-portrait{position:relative;justify-self:end;width:min(100%,440px)}
+    .portrait-frame{background:#d8d1c8;padding:14px;transform:rotate(2.5deg);box-shadow:20px 24px 0 var(--wine);overflow:hidden}
+    .portrait-frame img{width:100%;aspect-ratio:1/1.08;object-fit:cover;filter:saturate(.82) contrast(1.02)}
+    .portrait-note{position:absolute;left:-58px;bottom:36px;background:var(--white);border:1px solid var(--ink);padding:12px 15px;transform:rotate(-5deg);font-family:var(--serif);font-style:italic;font-size:16px;box-shadow:6px 6px 0 var(--ink)}
+    .orbit{position:absolute;right:-46px;top:-30px;width:105px;height:105px;border:1px solid var(--ink);border-radius:50%;display:grid;place-items:center;animation:spin 18s linear infinite}
+    .orbit span{font-size:10px;letter-spacing:.13em;text-transform:uppercase;text-align:center;width:80px}
+    @keyframes spin{to{transform:rotate(360deg)}}
+    .ticker{background:var(--ink);color:var(--paper);overflow:hidden;border-block:1px solid var(--ink)}
+    .ticker-track{display:flex;width:max-content;animation:marquee 24s linear infinite;padding:14px 0}
+    .ticker-track span{font-family:var(--serif);font-size:20px;font-style:italic;white-space:nowrap;padding-right:28px}
+    .ticker-track b{color:#e85a4f;margin-right:28px}
+    @keyframes marquee{to{transform:translateX(-50%)}}
+    section{padding:105px 0}
+    .section-head{display:grid;grid-template-columns:.65fr 1.35fr;gap:40px;align-items:end;margin-bottom:48px}
+    .kicker{text-transform:uppercase;font-size:12px;letter-spacing:.14em;font-weight:800;color:var(--red)}
+    h2{font-family:var(--serif);font-size:clamp(44px,6vw,84px);line-height:.98;letter-spacing:-.055em;font-weight:400;margin:0}
+    .section-intro{font-size:20px;max-width:720px;margin:0;color:#4d4541}
+    .proof{background:var(--white);border-block:1px solid var(--line)}
+    .proof-grid{display:grid;grid-template-columns:repeat(3,1fr)}
+    .proof-item{padding:32px;border-right:1px solid var(--line)}
+    .proof-item:last-child{border-right:0}
+    .proof-number{font-family:var(--serif);font-size:clamp(48px,7vw,88px);line-height:1;color:var(--wine);letter-spacing:-.05em}
+    .proof-label{max-width:250px;font-weight:650;margin-top:10px}
+    .filter-bar{display:flex;gap:9px;flex-wrap:wrap;margin:0 0 34px}
+    .filter{border:1px solid var(--line);background:transparent;padding:9px 15px;border-radius:100px;cursor:pointer;font-size:14px;font-weight:700}
+    .filter.active,.filter:hover{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+    .work-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:20px}
+    .project{position:relative;min-height:520px;overflow:hidden;background:var(--ink);color:var(--white);grid-column:span 6;border:1px solid var(--ink);transition:.35s ease}
+    .project:nth-child(3),.project:nth-child(4){min-height:440px}
+    .project.hidden{display:none}
+    .project-media{position:absolute;inset:0;overflow:hidden}
+    .project-media img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease,filter .4s ease;filter:saturate(.78) brightness(.72)}
+    .project:hover .project-media img{transform:scale(1.035);filter:saturate(.95) brightness(.58)}
+    .project-content{position:absolute;inset:0;padding:30px;display:flex;flex-direction:column;justify-content:space-between;background:linear-gradient(180deg,rgba(10,8,8,.08),rgba(10,8,8,.8))}
+    .project-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+    .project-index{font-family:var(--serif);font-style:italic;font-size:18px}
+    .tag{font-size:11px;text-transform:uppercase;letter-spacing:.1em;border:1px solid rgba(255,255,255,.5);border-radius:100px;padding:7px 10px}
+    .project h3{font-family:var(--serif);font-size:clamp(36px,4.6vw,68px);line-height:.95;letter-spacing:-.05em;font-weight:400;margin:0 0 14px;max-width:620px}
+    .project p{max-width:550px;margin:0 0 20px;font-size:17px;color:#eee6df}
+    .project-open{border:0;border-bottom:1px solid currentColor;background:transparent;color:inherit;padding:0 0 3px;cursor:pointer;width:max-content;font-weight:800}
+    .project.brand-wf .project-media img{object-position:center 35%}
+    .process{background:var(--wine);color:var(--white)}
+    .process .kicker{color:#f4b0a9}
+    .process .section-intro{color:#eadfda}
+    .process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.25);border:1px solid rgba(255,255,255,.25)}
+    .step{background:var(--wine);padding:28px;min-height:250px}
+    .step b{display:block;font-family:var(--serif);font-size:44px;font-weight:400;color:#f4b0a9;margin-bottom:48px}
+    .step h3{font-size:20px;margin:0 0 12px}
+    .step p{margin:0;color:#eadfda;font-size:15px}
+    .about-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:9vw;align-items:start}
+    .about-sticky{position:sticky;top:40px}
+    .about-text{font-family:var(--serif);font-size:clamp(30px,4vw,55px);line-height:1.07;letter-spacing:-.04em;margin:0}
+    .about-text em{color:var(--red);font-weight:400}
+    .timeline{border-top:1px solid var(--line)}
+    .timeline-row{display:grid;grid-template-columns:150px 1fr;gap:25px;padding:24px 0;border-bottom:1px solid var(--line)}
+    .timeline-row time{font-size:13px;color:var(--muted);font-weight:750}
+    .timeline-row h3{margin:0 0 6px;font-size:20px}
+    .timeline-row p{margin:0;color:#514943}
+    .tools{display:flex;flex-wrap:wrap;gap:9px;margin-top:28px}
+    .tool{border:1px solid var(--line);padding:9px 12px;border-radius:100px;font-size:14px;background:var(--white)}
+    .contact{background:var(--ink);color:var(--paper);padding:90px 0 45px}
+    .contact h2{max-width:980px}
+    .contact h2 em{color:#e85a4f;font-weight:400}
+    .contact-actions{display:flex;gap:12px;flex-wrap:wrap;margin:35px 0 90px}
+    .contact .btn{border-color:var(--paper)}
+    .contact .btn.primary{background:var(--paper);color:var(--ink)}
+    .footer{display:flex;justify-content:space-between;gap:20px;padding-top:22px;border-top:1px solid rgba(255,255,255,.25);font-size:13px;color:#cfc5bd}
+    dialog{width:min(920px,calc(100% - 30px));max-height:90svh;border:0;padding:0;background:var(--white);color:var(--ink);box-shadow:0 30px 100px rgba(0,0,0,.45)}
+    dialog::backdrop{background:rgba(14,10,9,.75);backdrop-filter:blur(5px)}
+    .modal-close{position:sticky;top:14px;float:right;margin:14px 14px 0 0;width:42px;height:42px;border-radius:50%;border:1px solid var(--ink);background:var(--white);cursor:pointer;z-index:2;font-size:22px}
+    .modal-inner{padding:54px}
+    .modal-inner h3{font-family:var(--serif);font-size:clamp(42px,6vw,72px);line-height:.95;letter-spacing:-.05em;font-weight:400;margin:0 0 18px}
+    .modal-lead{font-size:20px;max-width:690px;color:#554c47}
+    .case-meta{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:34px 0}
+    .case-meta div{border-top:1px solid var(--ink);padding-top:10px}
+    .case-meta b{display:block;text-transform:uppercase;font-size:11px;letter-spacing:.1em;color:var(--red);margin-bottom:4px}
+    .case-body{display:grid;grid-template-columns:1fr 1fr;gap:36px;margin:35px 0}
+    .case-body h4{text-transform:uppercase;font-size:12px;letter-spacing:.1em;margin:0 0 8px}
+    .case-body p,.case-body li{color:#514943}
+    .case-gallery{display:grid;grid-template-columns:1.4fr .6fr;gap:12px;margin-top:28px}
+    .case-gallery img{width:100%;height:360px;object-fit:cover;background:#ddd}
+    .case-gallery img:last-child{object-position:top}
+    .modal-result{font-family:var(--serif);font-size:30px;line-height:1.15;border-block:1px solid var(--line);padding:24px 0;margin-top:32px}
+    .reveal{opacity:0;transform:translateY(28px);transition:.65s ease}
+    .reveal.visible{opacity:1;transform:none}
+    @media(max-width:900px){
+      .shell{width:min(100% - 28px,720px)}
+      .nav-links a:not(.nav-cta){display:none}
+      .hero{grid-template-columns:1fr;min-height:auto;padding-top:46px}
+      .hero-portrait{justify-self:center;width:min(76vw,390px);margin-top:28px}
+      .section-head,.about-grid{grid-template-columns:1fr}
+      .proof-grid{grid-template-columns:1fr}
+      .proof-item{border-right:0;border-bottom:1px solid var(--line)}
+      .proof-item:last-child{border-bottom:0}
+      .project{grid-column:1/-1;min-height:500px}
+      .process-grid{grid-template-columns:1fr 1fr}
+      .about-sticky{position:static}
+      .case-body{grid-template-columns:1fr}
+    }
+    @media(max-width:560px){
+      .shell{width:calc(100% - 22px)}
+      .nav{height:68px}
+      .brand-label{display:none}
+      .hero{min-height:0;padding:40px 0 60px}
+      h1{font-size:18.2vw}
+      h1 span{font-size:.42em}
+      .hero-copy{font-size:17px}
+      section{padding:74px 0}
+      .section-head{gap:16px;margin-bottom:30px}
+      .section-intro{font-size:17px}
+      .project{min-height:460px}
+      .project-content{padding:22px}
+      .process-grid{grid-template-columns:1fr}
+      .step{min-height:210px}
+      .timeline-row{grid-template-columns:1fr;gap:5px}
+      .footer{flex-direction:column}
+      .modal-inner{padding:28px 20px 34px}
+      .case-meta,.case-gallery{grid-template-columns:1fr}
+      .case-gallery img{height:280px}
+      .orbit{right:-10px}
+      .portrait-note{left:-8px}
+    }
+    @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+  </style>
+</head>
+<body>
+  <div class="progress" aria-hidden="true"></div>
+  <header class="shell nav">
+    <a class="brand" href="#top" aria-label="Back to top"><span class="brand-mark">SA</span><span class="brand-label">Siddiqah Auckbarallee</span><i aria-hidden="true"></i></a>
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a href="#work">Work</a><a href="#about">About</a><a href="assets/Siddiqah_Auckbarallee_CV.pdf" target="_blank">CV</a><a class="nav-cta" href="mailto:siddiqah2504@gmail.com">Let’s talk</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="shell hero">
+      <div>
+        <p class="eyebrow">Marketing manager · Aberdeen / UK</p>
+        <h1>Siddiqah<span>Campaigns people can feel — and act on.</span></h1>
+        <p class="hero-copy">I turn briefs into joined-up campaigns across content, social, email, websites, print and real-world moments — then use the response to make the next decision sharper.</p>
+        <div class="actions"><a class="btn primary" href="#work">Explore the work</a><a class="btn" href="assets/Siddiqah_Auckbarallee_CV.pdf" target="_blank">Download CV</a></div>
+      </div>
+      <div class="hero-portrait" aria-label="Portrait of Siddiqah Auckbarallee">
+        <div class="orbit" aria-hidden="true"><span>Strategy · story · delivery</span></div>
+        <div class="portrait-frame"><img src="assets/siddiqah.webp" alt="Siddiqah Auckbarallee" width="627" height="627"></div>
+        <div class="portrait-note">Hands-on, always.</div>
+      </div>
+    </section>
+
+    <div class="ticker" aria-label="Marketing capabilities"><div class="ticker-track">
+      <span>Integrated campaigns</span><b>✦</b><span>Brand storytelling</span><b>✦</b><span>Social media</span><b>✦</b><span>Email marketing</span><b>✦</b><span>Events</span><b>✦</b><span>Websites</span><b>✦</b><span>Analytics</span><b>✦</b>
+      <span>Integrated campaigns</span><b>✦</b><span>Brand storytelling</span><b>✦</b><span>Social media</span><b>✦</b><span>Email marketing</span><b>✦</b><span>Events</span><b>✦</b><span>Websites</span><b>✦</b><span>Analytics</span><b>✦</b>
+    </div></div>
+
+    <section class="proof">
+      <div class="shell proof-grid reveal">
+        <div class="proof-item"><div class="proof-number">£21,240</div><div class="proof-label">raised through one integrated community campaign</div></div>
+        <div class="proof-item"><div class="proof-number">3</div><div class="proof-label">distinct brand worlds: social impact, premium retail and editorial</div></div>
+        <div class="proof-item"><div class="proof-number">End-to-end</div><div class="proof-label">from audience insight and concept to assets, launch and learning</div></div>
+      </div>
+    </section>
+
+    <section id="work" class="shell">
+      <div class="section-head reveal">
+        <div><span class="kicker">Selected work</span><h2>Proof, not promises.</h2></div>
+        <p class="section-intro">Choose what matters to you. Each case study shows the brief, what I owned and what changed — not just a gallery of nice posts.</p>
+      </div>
+      <div class="filter-bar reveal" role="group" aria-label="Filter projects">
+        <button class="filter active" data-filter="all">All work</button><button class="filter" data-filter="campaign">Campaigns</button><button class="filter" data-filter="content">Content</button><button class="filter" data-filter="brand">Brand & web</button><button class="filter" data-filter="events">Events</button>
+      </div>
+      <div class="work-grid">
+        <article class="project reveal" data-categories="campaign content events">
+          <div class="project-media"><img src="assets/pedal-hub.webp" alt="Pedal with Purpose campaign hub"></div>
+          <div class="project-content"><div class="project-top"><span class="project-index">01</span><span class="tag">Integrated campaign</span></div><div><h3>Pedal with Purpose</h3><p>A community fundraising story turned into a connected digital, email and print campaign.</p><button class="project-open" data-case="pedal">Open case study</button></div></div>
+        </article>
+        <article class="project reveal" data-categories="brand content events">
+          <div class="project-media"><img src="assets/auryn-web.webp" alt="Auryn Adornments website and jewellery campaign"></div>
+          <div class="project-content"><div class="project-top"><span class="project-index">02</span><span class="tag">Premium retail</span></div><div><h3>Auryn Adornments</h3><p>A polished content and customer journey across website, social, email and in-studio moments.</p><button class="project-open" data-case="auryn">Open case study</button></div></div>
+        </article>
+        <article class="project reveal" data-categories="content campaign events">
+          <div class="project-media"><img src="assets/breadmaker-web.webp" alt="The Bread Maker website and content"></div>
+          <div class="project-content"><div class="project-top"><span class="project-index">03</span><span class="tag">Social enterprise</span></div><div><h3>Stories people can enter</h3><p>Accessible, human communications that show the people, purpose and everyday energy behind the organisation.</p><button class="project-open" data-case="bread">Open case study</button></div></div>
+        </article>
+        <article class="project brand-wf reveal" data-categories="brand content campaign">
+          <div class="project-media"><img src="assets/wellfuck-spread.webp" alt="Well, Fuck. independent magazine brand"></div>
+          <div class="project-content"><div class="project-top"><span class="project-index">04</span><span class="tag">Independent brand</span></div><div><h3>WELL, FUCK.</h3><p>A women’s editorial project built from one idea into a complete brand, magazine and digital launch.</p><button class="project-open" data-case="wf">Open case study</button></div></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="process">
+      <div class="shell">
+        <div class="section-head reveal"><div><span class="kicker">How I work</span><h2>From “we need something” to something that works.</h2></div><p class="section-intro">I am comfortable shaping the brief and doing the work. The thinking and the execution stay connected.</p></div>
+        <div class="process-grid reveal">
+          <div class="step"><b>01</b><h3>Find the real job</h3><p>Clarify the audience, desired action, constraints and what success should look like.</p></div>
+          <div class="step"><b>02</b><h3>Build the idea</h3><p>Shape the message, format, creative direction and channel plan around that job.</p></div>
+          <div class="step"><b>03</b><h3>Make and deliver</h3><p>Create assets, coordinate people, manage approvals and keep the work moving.</p></div>
+          <div class="step"><b>04</b><h3>Learn out loud</h3><p>Read the numbers and real responses, then turn them into a better next decision.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="shell">
+      <div class="about-grid">
+        <div class="about-sticky reveal"><span class="kicker">About</span><p class="about-text">I work best where <em>strategy, story and delivery</em> meet.</p></div>
+        <div class="reveal">
+          <p class="section-intro">I’m an MSc Digital Marketing graduate managing marketing across two Aberdeen organisations while building an independent editorial brand. My experience moves between community fundraising, premium retail, customer experience and client work — but the thread is the same: understand people, make the message clear, and deliver properly.</p>
+          <div class="timeline">
+            <div class="timeline-row"><time>2025 — now</time><div><h3>Marketing Manager · Auryn Adornments</h3><p>Premium retail content, website, launches, email, events and customer communications.</p></div></div>
+            <div class="timeline-row"><time>2024 — now</time><div><h3>Marketing Manager · The Bread Maker</h3><p>Campaigns, social, newsletters, web, print, press support and community storytelling.</p></div></div>
+            <div class="timeline-row"><time>2026 — now</time><div><h3>Founder & Editorial Director · WELL, FUCK.</h3><p>Brand strategy, editorial direction, visual identity, magazine production and launch planning.</p></div></div>
+            <div class="timeline-row"><time>2020 — 2023</time><div><h3>Founder & CEO · DISIK LTD</h3><p>Client briefs, audience research, brand concepts, content plans and digital delivery.</p></div></div>
+          </div>
+          <div class="tools" aria-label="Tools"><span class="tool">Canva</span><span class="tool">Mailchimp</span><span class="tool">Meta Business Suite</span><span class="tool">Google Analytics</span><span class="tool">Shopify</span><span class="tool">Wix</span><span class="tool">Squarespace</span><span class="tool">WordPress</span><span class="tool">Adobe Premiere Pro</span><span class="tool">Microsoft 365</span></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="contact">
+    <div class="shell"><span class="kicker">Available across the UK</span><h2>Need someone who can think it through <em>and</em> get it out the door?</h2><div class="contact-actions"><a class="btn primary" href="mailto:siddiqah2504@gmail.com">Email Siddiqah</a><a class="btn" href="assets/Siddiqah_Auckbarallee_CV.pdf" target="_blank">View CV</a></div><div class="footer"><span>© 2026 Siddiqah Auckbarallee</span><span>English · French · Hindi</span><span>Aberdeen · Open to relocate</span></div></div>
+  </footer>
+
+  <dialog id="case-modal" aria-labelledby="modal-title"><button class="modal-close" aria-label="Close case study">×</button><div class="modal-inner" id="modal-content"></div></dialog>
+
+  <template id="case-pedal"><span class="kicker">Integrated fundraising campaign</span><h3 id="modal-title">Pedal with Purpose</h3><p class="modal-lead">A personal endurance challenge needed to become a story the wider community could understand, follow and support.</p><div class="case-meta"><div><b>Organisation</b>The Bread Maker</div><div><b>My role</b>Campaign communications</div><div><b>Result</b>£21,240 raised</div></div><div class="case-body"><div><h4>The brief</h4><p>Turn Neil Marchant’s cycle challenge into a joined-up campaign that could build awareness, sustain momentum and make donating straightforward.</p></div><div><h4>What I delivered</h4><ul><li>Campaign message and progress updates</li><li>JustGiving and campaign hub journey</li><li>Mailchimp, social and print communications</li><li>Partner liaison and accessible storytelling</li></ul></div></div><div class="case-gallery"><img src="assets/pedal-hub.webp" alt="Pedal with Purpose campaign webpage"><img src="assets/pedal-email.webp" alt="Pedal with Purpose email campaign"></div><p class="modal-result">The campaign raised <strong>£21,240</strong> and gave the organisation a clear story that worked across every audience touchpoint.</p></template>
+  <template id="case-auryn"><span class="kicker">Premium retail marketing</span><h3 id="modal-title">Auryn Adornments</h3><p class="modal-lead">Luxury visual standards with the practical job of helping customers understand products, services and what to book next.</p><div class="case-meta"><div><b>Brand</b>Auryn Adornments</div><div><b>My role</b>Marketing Manager</div><div><b>Channels</b>Web, social, email, studio</div></div><div class="case-body"><div><h4>The brief</h4><p>Create a more consistent digital brand and customer journey for a piercing, tattoo and fine-jewellery studio with multiple practitioners and offers.</p></div><div><h4>What I delivered</h4><ul><li>Website build and customer information</li><li>Content calendars, shoots and approvals</li><li>Product, practitioner and guest campaigns</li><li>Email, events and in-studio collateral</li></ul></div></div><div class="case-gallery"><img src="assets/auryn-web.webp" alt="Auryn website"><img src="assets/auryn-social.webp" alt="Auryn social media grid"></div><p class="modal-result">A connected brand experience designed to feel premium without making the customer journey complicated.</p></template>
+  <template id="case-bread"><span class="kicker">Social impact communications</span><h3 id="modal-title">Stories people can enter</h3><p class="modal-lead">The work is meaningful because the people are. The communications needed to show that with dignity, warmth and clarity.</p><div class="case-meta"><div><b>Organisation</b>The Bread Maker</div><div><b>My role</b>Marketing Manager</div><div><b>Rhythm</b>Always-on + campaigns</div></div><div class="case-body"><div><h4>The brief</h4><p>Make the organisation’s impact visible across everyday content, fundraising, events and external communications without flattening it into a generic charity story.</p></div><div><h4>What I delivered</h4><ul><li>Reels, photography and weekly newsletters</li><li>Website banners and campaign pages</li><li>Print collateral and event communications</li><li>Press coordination and stakeholder stories</li></ul></div></div><div class="case-gallery"><img src="assets/breadmaker-web.webp" alt="The Bread Maker website"><img src="assets/pedal-reel.webp" alt="Social media campaign content"></div><p class="modal-result">A recognisable, human content system that makes the organisation’s purpose easy to understand and its community easy to see.</p></template>
+  <template id="case-wf"><span class="kicker">Independent editorial brand</span><h3 id="modal-title">WELL, FUCK.</h3><p class="modal-lead">A blunt, design-led women’s magazine about self-respect, identity and coming back to yourself.</p><div class="case-meta"><div><b>Project</b>Founder-led brand</div><div><b>My role</b>Strategy to production</div><div><b>Format</b>40-page print + digital</div></div><div class="case-body"><div><h4>The brief</h4><p>Create a women’s platform that rejects generic self-care language and feels as considered as an independent fashion title.</p></div><div><h4>What I built</h4><ul><li>Brand positioning, voice and visual system</li><li>Long-form editorial and interactive pages</li><li>Print production and launch planning</li><li>Website, social content and audience testing</li></ul></div></div><div class="case-gallery"><img src="assets/wellfuck-spread.webp" alt="Well Fuck editorial spreads"><img src="assets/wellfuck-cover.webp" alt="Well Fuck Issue 01 cover"></div><p class="modal-result">One idea developed into a complete editorial product with a distinctive voice, coherent design system and clear route to market.</p></template>
+
+  <script>
+    const progress = document.querySelector('.progress');
+    const updateProgress = () => { const max = document.documentElement.scrollHeight - innerHeight; progress.style.width = `${max ? scrollY / max * 100 : 0}%`; };
+    addEventListener('scroll', updateProgress, {passive:true}); updateProgress();
+
+    const observer = new IntersectionObserver(entries => entries.forEach(entry => { if(entry.isIntersecting){ entry.target.classList.add('visible'); observer.unobserve(entry.target); } }), {threshold:.12});
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    const filters = document.querySelectorAll('.filter');
+    const projects = document.querySelectorAll('.project');
+    filters.forEach(button => button.addEventListener('click', () => {
+      filters.forEach(b => b.classList.remove('active')); button.classList.add('active');
+      const chosen = button.dataset.filter;
+      projects.forEach(project => project.classList.toggle('hidden', chosen !== 'all' && !project.dataset.categories.includes(chosen)));
+    }));
+
+    const modal = document.querySelector('#case-modal');
+    const modalContent = document.querySelector('#modal-content');
+    document.querySelectorAll('.project-open').forEach(button => button.addEventListener('click', () => {
+      const template = document.querySelector(`#case-${button.dataset.case}`);
+      modalContent.replaceChildren(template.content.cloneNode(true));
+      modal.showModal(); document.body.style.overflow='hidden';
+    }));
+    const closeModal = () => { modal.close(); document.body.style.overflow=''; };
+    document.querySelector('.modal-close').addEventListener('click', closeModal);
+    modal.addEventListener('click', e => { if(e.target === modal) closeModal(); });
+    modal.addEventListener('close', () => { document.body.style.overflow=''; });
+  </script>
+</body>
+</html>
