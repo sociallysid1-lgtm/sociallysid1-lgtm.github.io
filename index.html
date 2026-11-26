@@ -8,14 +8,14 @@
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23151110'/%3E%3Ctext x='9' y='43' font-family='Arial' font-size='30' font-weight='700' fill='%23f4efe9'%3ESA%3C/text%3E%3Ccircle cx='51' cy='16' r='5' fill='%23b22b22'/%3E%3C/svg%3E">
   <style>
     :root {
-      --ink:#151110;
-      --paper:#f4efe9;
-      --white:#fffdf9;
-      --red:#a72319;
-      --wine:#581f25;
-      --gold:#caa76c;
-      --sage:#788267;
-      --line:rgba(21,17,16,.18);
+      --ink:#28211e;
+      --paper:#f3eee6;
+      --white:#fbf8f2;
+      --red:#8b6e4e;
+      --wine:#46332d;
+      --gold:#b39a72;
+      --sage:#8b8176;
+      --line:rgba(40,33,30,.18);
       --muted:#6f6661;
       --serif: Georgia, 'Times New Roman', serif;
       --sans: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -30,12 +30,12 @@
     .shell{width:min(1380px,calc(100% - 48px));margin:auto}
     .nav{height:82px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);position:relative;z-index:20}
     .brand{display:flex;align-items:center;gap:12px;text-decoration:none;font-weight:800;letter-spacing:-.03em}
-    .brand-mark{width:39px;height:39px;border-radius:50%;background:var(--ink);color:var(--paper);display:grid;place-items:center;font-size:13px;letter-spacing:.02em}
+    .brand-mark{width:39px;height:39px;border-radius:4px;background:var(--ink);color:var(--paper);display:grid;place-items:center;font-size:13px;letter-spacing:.02em}
     .brand i{width:8px;height:8px;background:var(--red);border-radius:50%;display:block}
     .nav-links{display:flex;align-items:center;gap:28px}
     .nav-links a{text-decoration:none;font-size:14px;font-weight:650}
     .nav-links a:hover{text-decoration:underline;text-underline-offset:5px}
-    .nav-cta{border:1px solid var(--ink);border-radius:100px;padding:10px 17px}
+    .nav-cta{border:1px solid var(--ink);border-radius:3px;padding:10px 17px}
     .hero{min-height:calc(100svh - 82px);display:grid;grid-template-columns:minmax(0,1.35fr) minmax(300px,.65fr);align-items:center;gap:6vw;padding:54px 0 70px;position:relative}
     .eyebrow{display:flex;align-items:center;gap:10px;text-transform:uppercase;font-size:12px;letter-spacing:.14em;font-weight:750;margin:0 0 22px}
     .eyebrow::before{content:'';width:32px;height:2px;background:var(--red)}
@@ -43,7 +43,7 @@
     h1 span{display:block;font-family:var(--sans);font-weight:850;font-size:.36em;line-height:1.12;letter-spacing:-.055em;margin-top:24px}
     .hero-copy{font-size:clamp(17px,1.45vw,21px);max-width:650px;margin:32px 0;color:#3f3936}
     .actions{display:flex;flex-wrap:wrap;gap:12px}
-    .btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;border:1px solid var(--ink);padding:11px 19px;border-radius:100px;text-decoration:none;font-weight:750;transition:.2s ease;background:transparent;cursor:pointer}
+     .btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;border:1px solid var(--ink);padding:11px 19px;border-radius:3px;text-decoration:none;font-weight:750;transition:.2s ease;background:transparent;cursor:pointer}
     .btn.primary{background:var(--ink);color:var(--paper)}
     .btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(21,17,16,.12)}
     .hero-portrait{position:relative;justify-self:end;width:min(100%,440px)}
@@ -70,7 +70,7 @@
     .proof-number{font-family:var(--serif);font-size:clamp(48px,7vw,88px);line-height:1;color:var(--wine);letter-spacing:-.05em}
     .proof-label{max-width:250px;font-weight:650;margin-top:10px}
     .filter-bar{display:flex;gap:9px;flex-wrap:wrap;margin:0 0 34px}
-    .filter{border:1px solid var(--line);background:transparent;padding:9px 15px;border-radius:100px;cursor:pointer;font-size:14px;font-weight:700}
+    .filter{border:1px solid var(--line);background:transparent;padding:9px 15px;border-radius:3px;cursor:pointer;font-size:14px;font-weight:700}
     .filter.active,.filter:hover{background:var(--ink);color:var(--paper);border-color:var(--ink)}
     .work-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:20px}
     .project{position:relative;min-height:520px;overflow:hidden;background:var(--ink);color:var(--white);grid-column:span 6;border:1px solid var(--ink);transition:.35s ease}
@@ -105,7 +105,7 @@
     .timeline-row h3{margin:0 0 6px;font-size:20px}
     .timeline-row p{margin:0;color:#514943}
     .tools{display:flex;flex-wrap:wrap;gap:9px;margin-top:28px}
-    .tool{border:1px solid var(--line);padding:9px 12px;border-radius:100px;font-size:14px;background:var(--white)}
+    .tool{border:1px solid var(--line);padding:9px 12px;border-radius:2px;font-size:14px;background:var(--white)}
     .contact{background:var(--ink);color:var(--paper);padding:90px 0 45px}
     .contact h2{max-width:980px}
     .contact h2 em{color:#e85a4f;font-weight:400}
@@ -176,16 +176,16 @@
   <header class="shell nav">
     <a class="brand" href="#top" aria-label="Back to top"><span class="brand-mark">SA</span><span class="brand-label">Siddiqah Auckbarallee</span><i aria-hidden="true"></i></a>
     <nav class="nav-links" aria-label="Primary navigation">
-      <a href="#work">Work</a><a href="#about">About</a><a href="assets/Siddiqah_Auckbarallee_CV.pdf" target="_blank">CV</a><a class="nav-cta" href="mailto:siddiqah2504@gmail.com">Let’s talk</a>
+      <a href="#work">Work</a><a href="#education">Education</a><a href="#about">About</a><a href="assets/Siddiqah_Auckbarallee_CV.pdf" target="_blank">CV</a><a class="nav-cta" href="mailto:sociallysid1@gmail.com">Let’s talk</a>
     </nav>
   </header>
 
   <main id="top">
     <section class="shell hero">
       <div>
-        <p class="eyebrow">Marketing manager · Aberdeen / UK</p>
+        <p class="eyebrow">Marketing & business operations · Aberdeen</p>
         <h1>Siddiqah<span>Campaigns people can feel — and act on.</span></h1>
-        <p class="hero-copy">I turn briefs into joined-up campaigns across content, social, email, websites, print and real-world moments — then use the response to make the next decision sharper.</p>
+        <p class="hero-copy">I bring marketing, business coordination and customer experience together — from shaping campaigns and building websites to organising people, suppliers and the detail that gets work delivered.</p>
         <div class="actions"><a class="btn primary" href="#work">Explore the work</a><a class="btn" href="assets/Siddiqah_Auckbarallee_CV.pdf" target="_blank">Download CV</a></div>
       </div>
       <div class="hero-portrait" aria-label="Portrait of Siddiqah Auckbarallee">
@@ -202,8 +202,8 @@
 
     <section class="proof">
       <div class="shell proof-grid reveal">
-        <div class="proof-item"><div class="proof-number">£21,240</div><div class="proof-label">raised through one integrated community campaign</div></div>
-        <div class="proof-item"><div class="proof-number">3</div><div class="proof-label">distinct brand worlds: social impact, premium retail and editorial</div></div>
+        <div class="proof-item"><div class="proof-number">£11,000+</div><div class="proof-label">raised through one integrated community campaign</div></div>
+        <div class="proof-item"><div class="proof-number">3</div><div class="proof-label">areas brought together: marketing, business operations and people</div></div>
         <div class="proof-item"><div class="proof-number">End-to-end</div><div class="proof-label">from audience insight and concept to assets, launch and learning</div></div>
       </div>
     </section>
@@ -248,25 +248,25 @@
       </div>
     </section>
 
-    <section id="about" class="shell">
+    <section id="education" class="proof"><div class="shell"><div class="section-head reveal"><div><span class="kicker">Education</span><h2>Business thinking, backed by study.</h2></div><p class="section-intro">My academic background combines digital marketing with hospitality and service management, supported by additional business and management study.</p></div><div class="proof-grid reveal"><div class="proof-item"><span class="kicker">2023 — 2024 · Robert Gordon University</span><h3>MSc Digital Marketing</h3><p>Thesis project: developing a business concept and strategic plan for establishing my own digital marketing agency, including market research, service positioning and business planning.</p></div><div class="proof-item"><span class="kicker">2019 — 2022 · Vatel International Business School</span><h3>BSc International Hotel Management</h3><p>A grounding in service management, hospitality operations, customer experience and business practice.</p></div><div class="proof-item"><span class="kicker">2019 · International Business Management Institute</span><h3>Mini MBA Diploma</h3><p>Additional diplomas in Financial Management, Business Management, Strategic Management and Project Management.</p></div></div></div></section><section id="about" class="shell">
       <div class="about-grid">
         <div class="about-sticky reveal"><span class="kicker">About</span><p class="about-text">I work best where <em>strategy, story and delivery</em> meet.</p></div>
         <div class="reveal">
           <p class="section-intro">I’m an MSc Digital Marketing graduate managing marketing across two Aberdeen organisations while building an independent editorial brand. My experience moves between community fundraising, premium retail, customer experience and client work — but the thread is the same: understand people, make the message clear, and deliver properly.</p>
           <div class="timeline">
-            <div class="timeline-row"><time>2025 — now</time><div><h3>Marketing Manager · Auryn Adornments</h3><p>Premium retail content, website, launches, email, events and customer communications.</p></div></div>
-            <div class="timeline-row"><time>2024 — now</time><div><h3>Marketing Manager · The Bread Maker</h3><p>Campaigns, social, newsletters, web, print, press support and community storytelling.</p></div></div>
+            <div class="timeline-row"><time>Feb 2025 — Oct 2026</time><div><h3>Marketing Manager · Auryn Adornments</h3><p>Marketing for a premium jewellery and piercing studio, including website development, brand content, promotions and events.</p></div></div>
+            <div class="timeline-row"><time>Mar 2024 — now</time><div><h3>Marketing Manager · The Bread Maker</h3><p>Content, website updates, campaigns, fundraising communications, events and local partnerships for a social enterprise.</p></div></div>
             <div class="timeline-row"><time>2026 — now</time><div><h3>Founder & Editorial Director · WELL, FUCK.</h3><p>Brand strategy, editorial direction, visual identity, magazine production and launch planning.</p></div></div>
-            <div class="timeline-row"><time>2020 — 2023</time><div><h3>Founder & CEO · DISIK LTD</h3><p>Client briefs, audience research, brand concepts, content plans and digital delivery.</p></div></div>
+            <div class="timeline-row"><time>2020 — 2023</time><div><h3>Founder & Director · DISIK Ltd</h3><p>Small-business ownership alongside work and study, with responsibility for administration, customer communication, supplier coordination and operational planning.</p></div></div>
           </div>
-          <div class="tools" aria-label="Tools"><span class="tool">Canva</span><span class="tool">Mailchimp</span><span class="tool">Meta Business Suite</span><span class="tool">Google Analytics</span><span class="tool">Shopify</span><span class="tool">Wix</span><span class="tool">Squarespace</span><span class="tool">WordPress</span><span class="tool">Adobe Premiere Pro</span><span class="tool">Microsoft 365</span></div>
+          <div class="tools" aria-label="Tools"><span class="tool">Business administration</span><span class="tool">Operational coordination</span><span class="tool">Supplier liaison</span><span class="tool">Customer experience</span><span class="tool">HR support</span><span class="tool">Project coordination</span><span class="tool">Canva</span><span class="tool">Mailchimp</span><span class="tool">Meta Business Suite</span><span class="tool">Google Analytics</span><span class="tool">Shopify</span><span class="tool">Wix</span><span class="tool">Squarespace</span><span class="tool">WordPress</span><span class="tool">Adobe Premiere Pro</span><span class="tool">Microsoft 365</span></div>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="contact">
-    <div class="shell"><span class="kicker">Available across the UK</span><h2>Need someone who can think it through <em>and</em> get it out the door?</h2><div class="contact-actions"><a class="btn primary" href="mailto:siddiqah2504@gmail.com">Email Siddiqah</a><a class="btn" href="assets/Siddiqah_Auckbarallee_CV.pdf" target="_blank">View CV</a></div><div class="footer"><span>© 2026 Siddiqah Auckbarallee</span><span>English · French · Hindi</span><span>Aberdeen · Open to relocate</span></div></div>
+    <div class="shell"><span class="kicker">Marketing · Business Operations · Communications</span><h2>Need someone who can think it through <em>and</em> get it out the door?</h2><div class="contact-actions"><a class="btn primary" href="mailto:siddiqah2504@gmail.com">Email Siddiqah</a><a class="btn" href="assets/Siddiqah_Auckbarallee_CV.pdf" target="_blank">View CV</a></div><div class="footer"><span>© 2026 Siddiqah Auckbarallee</span><span>English · French · Mauritian Creole</span><span>Aberdeen · Scotland</span></div></div>
   </footer>
 
   <dialog id="case-modal" aria-labelledby="modal-title"><button class="modal-close" aria-label="Close case study">×</button><div class="modal-inner" id="modal-content"></div></dialog>
