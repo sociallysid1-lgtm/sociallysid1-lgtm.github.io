@@ -169,6 +169,37 @@
       .portrait-note{left:-8px}
     }
     @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+  
+    /* 2026 luxury editorial refresh */
+    :root{--ink:#211b18;--paper:#f2eee7;--white:#fbf9f5;--red:#9b8060;--wine:#44332d;--gold:#ad956d;--sage:#8a8175;--line:rgba(45,34,29,.18);--muted:#756b63;--serif:Georgia,'Times New Roman',serif;--sans:'Aptos','Helvetica Neue',Arial,sans-serif}
+    body{letter-spacing:.005em}
+    .brand-mark{border-radius:3px;background:var(--wine);color:var(--paper)}
+    .nav-cta,.btn,.filter{border-radius:3px}
+    .nav-cta{border-color:var(--gold)}
+    .hero{gap:5vw}
+    .portrait-frame{transform:none;background:#e6dfd5;padding:9px;box-shadow:12px 12px 0 var(--wine)}
+    .portrait-note{border-radius:0;box-shadow:5px 5px 0 var(--gold)}
+    .orbit{border-color:var(--gold)}
+    .ticker{background:var(--wine);border-color:var(--wine)}
+    .ticker-track b{color:var(--gold)}
+    .proof{background:var(--white)}
+    .proof-number{color:var(--wine)}
+    .project{border:0;border-radius:2px;background:var(--wine)}
+    .project-content{background:linear-gradient(180deg,rgba(25,19,16,.06),rgba(25,19,16,.78))}
+    .tag{border-radius:2px}
+    .process{background:var(--wine)}
+    .process-grid{background:rgba(255,255,255,.16);border-color:rgba(255,255,255,.16)}
+    .step{background:var(--wine)}
+    .tool{border-radius:2px;background:var(--white)}
+    .contact{background:#211b18}
+    .contact h2 em{color:var(--gold)}
+    .btn.primary{background:var(--wine);border-color:var(--wine)}
+    .contact .btn.primary{background:var(--paper);border-color:var(--paper);color:var(--ink)}
+    .section-head{margin-bottom:38px}
+    .proof-item{padding:26px 30px}
+    .timeline-row{padding:19px 0}
+    .step{min-height:220px}
+    @media(max-width:900px){.portrait-frame{box-shadow:8px 8px 0 var(--wine)}}
   </style>
 </head>
 <body>
@@ -184,7 +215,7 @@
     <section class="shell hero">
       <div>
         <p class="eyebrow">Marketing & business operations · Aberdeen</p>
-        <h1>Siddiqah<span>Campaigns people can feel — and act on.</span></h1>
+        <h1>Siddiqah<span>Marketing, business and ideas — made real.</span></h1>
         <p class="hero-copy">I bring marketing, business coordination and customer experience together — from shaping campaigns and building websites to organising people, suppliers and the detail that gets work delivered.</p>
         <div class="actions"><a class="btn primary" href="#work">Explore the work</a><a class="btn" href="assets/Siddiqah_Auckbarallee_CV.pdf" target="_blank">Download CV</a></div>
       </div>
@@ -202,16 +233,16 @@
 
     <section class="proof">
       <div class="shell proof-grid reveal">
-        <div class="proof-item"><div class="proof-number">£11,000+</div><div class="proof-label">raised through one integrated community campaign</div></div>
+        <div class="proof-item"><div class="proof-number">£11,000+</div><div class="proof-label">planned, coordinated and communicated across digital and community channels</div></div>
         <div class="proof-item"><div class="proof-number">3</div><div class="proof-label">areas brought together: marketing, business operations and people</div></div>
-        <div class="proof-item"><div class="proof-number">End-to-end</div><div class="proof-label">from audience insight and concept to assets, launch and learning</div></div>
+        <div class="proof-item"><div class="proof-number">End-to-end</div><div class="proof-label">from business planning and customer insight to campaigns, operations and delivery</div></div>
       </div>
     </section>
 
     <section id="work" class="shell">
       <div class="section-head reveal">
         <div><span class="kicker">Selected work</span><h2>Proof, not promises.</h2></div>
-        <p class="section-intro">Choose what matters to you. Each case study shows the brief, what I owned and what changed — not just a gallery of nice posts.</p>
+        <p class="section-intro">Selected projects across marketing, brand development, business planning and communications. Each case study explains the context, my contribution and the thinking behind the work.</p>
       </div>
       <div class="filter-bar reveal" role="group" aria-label="Filter projects">
         <button class="filter active" data-filter="all">All work</button><button class="filter" data-filter="campaign">Campaigns</button><button class="filter" data-filter="content">Content</button><button class="filter" data-filter="brand">Brand & web</button><button class="filter" data-filter="events">Events</button>
@@ -219,45 +250,45 @@
       <div class="work-grid">
         <article class="project reveal" data-categories="campaign content events">
           <div class="project-media"><img src="assets/pedal-hub.webp" alt="Pedal with Purpose campaign hub"></div>
-          <div class="project-content"><div class="project-top"><span class="project-index">01</span><span class="tag">Integrated campaign</span></div><div><h3>Pedal with Purpose</h3><p>A community fundraising story turned into a connected digital, email and print campaign.</p><button class="project-open" data-case="pedal">Open case study</button></div></div>
+          <div class="project-content"><div class="project-top"><span class="project-index">01</span><span class="tag">Integrated campaign</span></div><div><h3>Pedal with Purpose</h3><p>Campaign communications, community storytelling and coordination supporting a major fundraising initiative.</p><button class="project-open" data-case="pedal">Open case study</button></div></div>
         </article>
         <article class="project reveal" data-categories="brand content events">
           <div class="project-media"><img src="assets/auryn-web.webp" alt="Auryn Adornments website and jewellery campaign"></div>
-          <div class="project-content"><div class="project-top"><span class="project-index">02</span><span class="tag">Premium retail</span></div><div><h3>Auryn Adornments</h3><p>A polished content and customer journey across website, social, email and in-studio moments.</p><button class="project-open" data-case="auryn">Open case study</button></div></div>
+          <div class="project-content"><div class="project-top"><span class="project-index">02</span><span class="tag">Premium retail</span></div><div><h3>Auryn Adornments</h3><p>Website development, brand consistency, digital marketing and customer journey for a premium jewellery and piercing studio.</p><button class="project-open" data-case="auryn">Open case study</button></div></div>
         </article>
         <article class="project reveal" data-categories="content campaign events">
           <div class="project-media"><img src="assets/breadmaker-web.webp" alt="The Bread Maker website and content"></div>
-          <div class="project-content"><div class="project-top"><span class="project-index">03</span><span class="tag">Social enterprise</span></div><div><h3>Stories people can enter</h3><p>Accessible, human communications that show the people, purpose and everyday energy behind the organisation.</p><button class="project-open" data-case="bread">Open case study</button></div></div>
+          <div class="project-content"><div class="project-top"><span class="project-index">03</span><span class="tag">Social enterprise</span></div><div><h3>Stories people can enter</h3><p>Content and campaign communications that make the organisation’s social purpose, people and everyday work visible.</p><button class="project-open" data-case="bread">Open case study</button></div></div>
         </article>
         <article class="project brand-wf reveal" data-categories="brand content campaign">
           <div class="project-media"><img src="assets/wellfuck-spread.webp?v=2" alt="Well, Fuck. independent magazine brand"></div>
-          <div class="project-content"><div class="project-top"><span class="project-index">04</span><span class="tag">Independent brand</span></div><div><h3>WELL, FUCK.</h3><p>A women’s editorial project built from one idea into a complete brand, magazine and digital launch.</p><button class="project-open" data-case="wf">Open case study</button></div></div>
+          <div class="project-content"><div class="project-top"><span class="project-index">04</span><span class="tag">Independent brand</span></div><div><h3>WELL, FUCK.</h3><p>An independent editorial concept developed through brand strategy, product planning, creative direction and digital communications.</p><button class="project-open" data-case="wf">Open case study</button></div></div>
         </article>
       </div>
     </section>
 
     <section class="process">
       <div class="shell">
-        <div class="section-head reveal"><div><span class="kicker">How I work</span><h2>From “we need something” to something that works.</h2></div><p class="section-intro">I am comfortable shaping the brief and doing the work. The thinking and the execution stay connected.</p></div>
+        <div class="section-head reveal"><div><span class="kicker">How I work</span><h2>Good ideas need sound planning — and proper delivery.</h2></div><p class="section-intro">My approach combines commercial awareness with practical delivery: understanding the objective, organising the work and communicating clearly with the people involved.</p></div>
         <div class="process-grid reveal">
-          <div class="step"><b>01</b><h3>Find the real job</h3><p>Clarify the audience, desired action, constraints and what success should look like.</p></div>
-          <div class="step"><b>02</b><h3>Build the idea</h3><p>Shape the message, format, creative direction and channel plan around that job.</p></div>
-          <div class="step"><b>03</b><h3>Make and deliver</h3><p>Create assets, coordinate people, manage approvals and keep the work moving.</p></div>
-          <div class="step"><b>04</b><h3>Learn out loud</h3><p>Read the numbers and real responses, then turn them into a better next decision.</p></div>
+          <div class="step"><b>01</b><h3>Understand the objective</h3><p>Research the audience, clarify the need and identify the practical and commercial priorities.</p></div>
+          <div class="step"><b>02</b><h3>Plan the approach</h3><p>Set priorities, define the message, map resources and choose the right channels.</p></div>
+          <div class="step"><b>03</b><h3>Coordinate delivery</h3><p>Bring together people, suppliers, information and timelines to move work forward.</p></div>
+          <div class="step"><b>04</b><h3>Review and improve</h3><p>Review feedback and outcomes, capture what worked and make the next decision more informed.</p></div>
         </div>
       </div>
     </section>
 
     <section id="education" class="proof"><div class="shell"><div class="section-head reveal"><div><span class="kicker">Education</span><h2>Business thinking, backed by study.</h2></div><p class="section-intro">My academic background combines digital marketing with hospitality and service management, supported by additional business and management study.</p></div><div class="proof-grid reveal"><div class="proof-item"><span class="kicker">2023 — 2024 · Robert Gordon University</span><h3>MSc Digital Marketing</h3><p>Thesis project: developing a business concept and strategic plan for establishing my own digital marketing agency, including market research, service positioning and business planning.</p></div><div class="proof-item"><span class="kicker">2019 — 2022 · Vatel International Business School</span><h3>BSc International Hotel Management</h3><p>A grounding in service management, hospitality operations, customer experience and business practice.</p></div><div class="proof-item"><span class="kicker">2019 · International Business Management Institute</span><h3>Mini MBA Diploma</h3><p>Additional diplomas in Financial Management, Business Management, Strategic Management and Project Management.</p></div></div></div></section><section id="about" class="shell">
       <div class="about-grid">
-        <div class="about-sticky reveal"><span class="kicker">About</span><p class="about-text">I work best where <em>strategy, story and delivery</em> meet.</p></div>
+        <div class="about-sticky reveal"><span class="kicker">About</span><p class="about-text">I bring together <em>marketing, management and practical business thinking</em>.</p></div>
         <div class="reveal">
-          <p class="section-intro">I’m an MSc Digital Marketing graduate managing marketing across two Aberdeen organisations while building an independent editorial brand. My experience moves between community fundraising, premium retail, customer experience and client work — but the thread is the same: understand people, make the message clear, and deliver properly.</p>
+          <p class="section-intro">I hold an MSc in Digital Marketing from Robert Gordon University and a BSc in International Hotel Management. My experience combines marketing and communications with business administration, coordination, customer experience and people support. I founded and managed DISIK in Mauritius alongside other work and studies, and previously supported HR operations at LUX* Grand Gaube. I enjoy roles where clear communication, commercial awareness and organised delivery all matter.</p>
           <div class="timeline">
             <div class="timeline-row"><time>Feb 2025 — Oct 2026</time><div><h3>Marketing Manager · Auryn Adornments</h3><p>Marketing for a premium jewellery and piercing studio, including website development, brand content, promotions and events.</p></div></div>
-            <div class="timeline-row"><time>Mar 2024 — now</time><div><h3>Marketing Manager · The Bread Maker</h3><p>Content, website updates, campaigns, fundraising communications, events and local partnerships for a social enterprise.</p></div></div>
-            <div class="timeline-row"><time>2026 — now</time><div><h3>Founder & Editorial Director · WELL, FUCK.</h3><p>Brand strategy, editorial direction, visual identity, magazine production and launch planning.</p></div></div>
-            <div class="timeline-row"><time>2020 — 2023</time><div><h3>Founder & Director · DISIK Ltd</h3><p>Small-business ownership alongside work and study, with responsibility for administration, customer communication, supplier coordination and operational planning.</p></div></div>
+            <div class="timeline-row"><time>Mar Mar 2024 — Present</time><div><h3>Marketing Manager · The Bread Maker</h3><p>Content, website updates, campaigns, fundraising communications, events and local partnerships for a social enterprise.</p></div></div>
+            <div class="timeline-row"><time>Independent project</time><div><h3>Independent editorial project · WELL, FUCK.</h3><p>Developing an editorial concept through positioning, brand identity, content planning and product development.</p></div></div>
+            <div class="timeline-row"><time>Apr 2020 — Aug 2023</time><div><h3>Founder & Director · DISIK Ltd</h3><p>Small-business ownership alongside work and study, with responsibility for administration, customer communication, supplier coordination and operational planning.</p></div></div>
           </div>
           <div class="tools" aria-label="Tools"><span class="tool">Business administration</span><span class="tool">Operational coordination</span><span class="tool">Supplier liaison</span><span class="tool">Customer experience</span><span class="tool">HR support</span><span class="tool">Project coordination</span><span class="tool">Canva</span><span class="tool">Mailchimp</span><span class="tool">Meta Business Suite</span><span class="tool">Google Analytics</span><span class="tool">Shopify</span><span class="tool">Wix</span><span class="tool">Squarespace</span><span class="tool">WordPress</span><span class="tool">Adobe Premiere Pro</span><span class="tool">Microsoft 365</span></div>
         </div>
@@ -266,12 +297,12 @@
   </main>
 
   <footer class="contact">
-    <div class="shell"><span class="kicker">Marketing · Business Operations · Communications</span><h2>Need someone who can think it through <em>and</em> get it out the door?</h2><div class="contact-actions"><a class="btn primary" href="mailto:siddiqah2504@gmail.com">Email Siddiqah</a><a class="btn" href="assets/Siddiqah_Auckbarallee_CV.pdf" target="_blank">View CV</a></div><div class="footer"><span>© 2026 Siddiqah Auckbarallee</span><span>English · French · Mauritian Creole</span><span>Aberdeen · Scotland</span></div></div>
+    <div class="shell"><span class="kicker">Marketing · Business Operations · Communications</span><h2>Good thinking. Clear communication. Reliable delivery.</h2><div class="contact-actions"><a class="btn primary" href="mailto:siddiqah2504@gmail.com">Email Siddiqah</a><a class="btn" href="assets/Siddiqah_Auckbarallee_CV.pdf" target="_blank">View CV</a></div><div class="footer"><span>© 2026 Siddiqah Auckbarallee</span><span>English · French · Mauritian Creole</span><span>Aberdeen · Scotland</span></div></div>
   </footer>
 
   <dialog id="case-modal" aria-labelledby="modal-title"><button class="modal-close" aria-label="Close case study">×</button><div class="modal-inner" id="modal-content"></div></dialog>
 
-  <template id="case-pedal"><span class="kicker">Integrated fundraising campaign</span><h3 id="modal-title">Pedal with Purpose</h3><p class="modal-lead">A personal endurance challenge needed to become a story the wider community could understand, follow and support.</p><div class="case-meta"><div><b>Organisation</b>The Bread Maker</div><div><b>My role</b>Campaign communications</div><div><b>Result</b>£21,240 raised</div></div><div class="case-body"><div><h4>The brief</h4><p>Turn Neil Marchant’s cycle challenge into a joined-up campaign that could build awareness, sustain momentum and make donating straightforward.</p></div><div><h4>What I delivered</h4><ul><li>Campaign message and progress updates</li><li>JustGiving and campaign hub journey</li><li>Mailchimp, social and print communications</li><li>Partner liaison and accessible storytelling</li></ul></div></div><div class="case-gallery"><img src="assets/pedal-hub.webp" alt="Pedal with Purpose campaign webpage"><img src="assets/pedal-email.webp" alt="Pedal with Purpose email campaign"></div><p class="modal-result">The campaign raised <strong>£21,240</strong> and gave the organisation a clear story that worked across every audience touchpoint.</p></template>
+  <template id="case-pedal"><span class="kicker">Integrated fundraising campaign</span><h3 id="modal-title">Pedal with Purpose</h3><p class="modal-lead">A personal endurance challenge needed to become a story the wider community could understand, follow and support.</p><div class="case-meta"><div><b>Organisation</b>The Bread Maker</div><div><b>My role</b>Campaign communications</div><div><b>Result</b>Campaigns raised</div></div><div class="case-body"><div><h4>The brief</h4><p>Turn Neil Marchant’s cycle challenge into a joined-up campaign that could build awareness, sustain momentum and make donating straightforward.</p></div><div><h4>What I delivered</h4><ul><li>Campaign message and progress updates</li><li>JustGiving and campaign hub journey</li><li>Mailchimp, social and print communications</li><li>Partner liaison and accessible storytelling</li></ul></div></div><div class="case-gallery"><img src="assets/pedal-hub.webp" alt="Pedal with Purpose campaign webpage"><img src="assets/pedal-email.webp" alt="Pedal with Purpose email campaign"></div><p class="modal-result">The campaign raised <strong>£21,240</strong> and gave the organisation a clear story that worked across every audience touchpoint.</p></template>
   <template id="case-auryn"><span class="kicker">Premium retail marketing</span><h3 id="modal-title">Auryn Adornments</h3><p class="modal-lead">Luxury visual standards with the practical job of helping customers understand products, services and what to book next.</p><div class="case-meta"><div><b>Brand</b>Auryn Adornments</div><div><b>My role</b>Marketing Manager</div><div><b>Channels</b>Web, social, email, studio</div></div><div class="case-body"><div><h4>The brief</h4><p>Create a more consistent digital brand and customer journey for a piercing, tattoo and fine-jewellery studio with multiple practitioners and offers.</p></div><div><h4>What I delivered</h4><ul><li>Website build and customer information</li><li>Content calendars, shoots and approvals</li><li>Product, practitioner and guest campaigns</li><li>Email, events and in-studio collateral</li></ul></div></div><div class="case-gallery"><img src="assets/auryn-web.webp" alt="Auryn website"><img src="assets/auryn-social.webp" alt="Auryn social media grid"></div><p class="modal-result">A connected brand experience designed to feel premium without making the customer journey complicated.</p></template>
   <template id="case-bread"><span class="kicker">Social impact communications</span><h3 id="modal-title">Stories people can enter</h3><p class="modal-lead">The work is meaningful because the people are. The communications needed to show that with dignity, warmth and clarity.</p><div class="case-meta"><div><b>Organisation</b>The Bread Maker</div><div><b>My role</b>Marketing Manager</div><div><b>Rhythm</b>Always-on + campaigns</div></div><div class="case-body"><div><h4>The brief</h4><p>Make the organisation’s impact visible across everyday content, fundraising, events and external communications without flattening it into a generic charity story.</p></div><div><h4>What I delivered</h4><ul><li>Reels, photography and weekly newsletters</li><li>Website banners and campaign pages</li><li>Print collateral and event communications</li><li>Press coordination and stakeholder stories</li></ul></div></div><div class="case-gallery"><img src="assets/breadmaker-web.webp" alt="The Bread Maker website"><img src="assets/pedal-reel.webp" alt="Social media campaign content"></div><p class="modal-result">A recognisable, human content system that makes the organisation’s purpose easy to understand and its community easy to see.</p></template>
   <template id="case-wf"><span class="kicker">Independent editorial brand</span><h3 id="modal-title">WELL, FUCK.</h3><p class="modal-lead">A blunt, design-led women’s magazine about self-respect, identity and coming back to yourself.</p><div class="case-meta"><div><b>Project</b>Founder-led brand</div><div><b>My role</b>Strategy to production</div><div><b>Format</b>40-page print + digital</div></div><div class="case-body"><div><h4>The brief</h4><p>Create a women’s platform that rejects generic self-care language and feels as considered as an independent fashion title.</p></div><div><h4>What I built</h4><ul><li>Brand positioning, voice and visual system</li><li>Long-form editorial and interactive pages</li><li>Print production and launch planning</li><li>Website, social content and audience testing</li></ul></div></div><div class="case-gallery"><img src="assets/wellfuck-spread.webp?v=2" alt="Well Fuck editorial spreads"><img src="assets/wellfuck-cover.webp" alt="Well Fuck Issue 01 cover"></div><p class="modal-result">One idea developed into a complete editorial product with a distinctive voice, coherent design system and clear route to market.</p></template>
